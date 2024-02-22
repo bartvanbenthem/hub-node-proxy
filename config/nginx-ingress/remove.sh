@@ -1,0 +1,1 @@
+kubectl -n ingress-nginx delete -f config/nginx-ingress/deployment.yaml
