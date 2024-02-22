@@ -23,7 +23,6 @@ metadata:
   name: azagent
   labels:
     app: azagent
-    tier: medium
 spec:
   replicas: 2 
   selector:
@@ -45,11 +44,11 @@ spec:
         secret:
           optional: true
           secretName: ca-certs
-      imagePullSecrets:
-      - name: cdtarget-regcred
+      #imagePullSecrets:
+      #- name: cdtarget-regcred
       containers:
       - name: azagent
-        image: ghcr.io/bartvanbenthem/azp-agent-alpine:latest
+        image: ghcr.io/bartvanbenthem/azagent-keda-22:latest
         volumeMounts:
         - name: ca-certs
           mountPath: /usr/local/share/ca-certificates
@@ -171,4 +170,3 @@ spec:
   podSelector:
     matchLabels:
       app: azagent
-      tier: medium
