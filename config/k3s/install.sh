@@ -3,11 +3,11 @@ mkdir ~/.kube/
 cp /etc/rancher/k3s/k3s.yaml ~/.kube/k3s.yaml
 
 # kubectl auto complete and kubeconfig env var
-source /usr/share/bash-completion/bash_completion
-echo 'source <(kubectl completion bash)' >>~/.bashrc
-kubectl completion bash >/etc/bash_completion.d/kubectl
-echo 'complete -F __start_kubectl k' >>~/.bashrc
-echo 'export KUBECONFIG=~/.kube/config:~/.kube/k3s.yaml' >>~/.bashrc
+#source /usr/share/bash-completion/bash_completion
+#echo 'source <(kubectl completion bash)' >>~/.bashrc
+#kubectl completion bash >/etc/bash_completion.d/kubectl
+#echo 'complete -F __start_kubectl k' >>~/.bashrc
+#echo 'export KUBECONFIG=~/.kube/config:~/.kube/k3s.yaml' >>~/.bashrc
 
 # Print info
 printf '\n'

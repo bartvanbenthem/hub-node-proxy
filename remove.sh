@@ -8,4 +8,4 @@ source config/config.sh
 ./config/nginx-ingress/remove.sh
 
 # remove k3s
-# ./config/k3s/remove.sh
+./config/k3s/remove.sh
