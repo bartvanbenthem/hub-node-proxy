@@ -9,5 +9,8 @@ source config/config.sh
 # Install Ingress Controller
 ./config/nginx-ingress/install.sh
 
+# Install proxy
+./config/proxy/install.sh
+
 kubectl get pods --all-namespaces --watch
 
