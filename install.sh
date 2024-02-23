@@ -1,5 +1,4 @@
 ### CNCP HUB NODE CONFIGURATION
-source ../00-ENV/env.sh
 source config/config.sh
 # Install K3s and configure kube config
 ./config/k3s/install.sh
