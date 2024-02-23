@@ -1,5 +1,4 @@
 ### CNCP HUB NODE CONFIGURATION
-source ../00-ENV/env.sh
 source config/config.sh
 
 # Remove Azure pipeline agents
