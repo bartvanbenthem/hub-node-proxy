@@ -2,7 +2,6 @@
 source config/config.sh
 
 cat <<EOF | kubectl apply -f -
-#ingress.yaml
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
