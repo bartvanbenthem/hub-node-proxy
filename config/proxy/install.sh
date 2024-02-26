@@ -1,8 +1,6 @@
 
 source config/config.sh
 
-kubectl -n ingress-nginx create secret generic ca-certs --from-file=$CONFIG_CERT_PATH
-
 cat <<EOF | kubectl apply -f -
 #ingress.yaml
 apiVersion: networking.k8s.io/v1
