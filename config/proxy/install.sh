@@ -1,6 +1,8 @@
 
 source config/config.sh
 
+kubectl -n ingress-nginx create secret tls tls-vcenter --cert=$CONFIG_INGRESS_CRT_PATH --key=$CONFIG_INGRESS_KEY_PATH
+
 cat <<EOF | kubectl apply -f -
 apiVersion: networking.k8s.io/v1
 kind: Ingress
@@ -24,6 +26,10 @@ spec:
               number: 443
         path: /
         pathType: ImplementationSpecific
+  tls:
+  - hosts:
+      - $CONFIG_VCENTER_HUB_ALIAS
+    secretName: tls-vcenter
 ---
 apiVersion: v1
 kind: Endpoints

@@ -9,6 +9,7 @@ source config/config.sh
 # Install Ingress Controller
 ./config/nginx-ingress/install.sh
 
+echo "Installing proxy components"
 # Install proxy
 ./config/proxy/install.sh
 

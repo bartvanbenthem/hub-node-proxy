@@ -491,8 +491,8 @@ spec:
           name: webhook-cert
           readOnly: true
         - name: vcenter-certs
-          mountPath: /etc/ssl/certs/vcenter.pem
-          subPath: vcenter.pem 
+          mountPath: /etc/ssl/certs/vcenter-ca.pem
+          subPath: vcenter-ca.pem 
           readOnly: false
       dnsPolicy: ClusterFirst
       nodeSelector:
